@@ -1,18 +1,17 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import { Image, Panel, Button } from 'react-bootstrap';
 
 function VaultLink(props) {
     return (
-      <div className="vault">
-        <div className="description">
+      <Panel>
+          <Image src="http://68.media.tumblr.com/fba67173ee0e128fd6ff707bf3558962/tumblr_nyp9p8eYus1s2ppeco1_500.gif"
+                 width="50px"
+                 height="50px"
+                 rounded />
           <h3>{props.description}</h3>
-        </div>
-          <FontAwesome
-            name='credit-card-alt'
-            size='4x'
-          />
-        <div className="info">Raised ${props.amount}</div>
-      </div>
+          <p>Raised ${props.amount}</p>
+          <Button bsStyle="primary">Contribute</Button>
+      </Panel>
     );
 }
 
